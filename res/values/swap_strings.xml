@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- Swap settings (LG V521).  The page drives the v521swap daemon of
+     device/lge/v521 through the persist.v521.swap.* properties. -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="swap_settings_title">Swap</string>
+    <string name="swap_settings_summary">Compressed RAM and SD card swap</string>
+
+    <string name="swap_enabled_title">Use swap</string>
+    <string name="swap_enabled_summary">Move memory of background apps out of RAM so fewer of them get closed</string>
+
+    <string name="swap_mode_title">Mode</string>
+    <string name="swap_mode_zram">Compressed RAM (zRAM)</string>
+    <string name="swap_mode_sdcard">SD card</string>
+    <string name="swap_mode_both">zRAM + SD card</string>
+
+    <string name="swap_order_title">Order</string>
+    <string name="swap_order_zram_first">zRAM first, SD card as overflow</string>
+    <string name="swap_order_sdcard_first">SD card first</string>
+    <string name="swap_order_spread">Spread across both</string>
+
+    <string name="swap_zram_size_title">zRAM size</string>
+
+    <string name="swap_reclaim_title">Proactive reclaim</string>
+    <string name="swap_reclaim_auto">Automatic (with zRAM)</string>
+    <string name="swap_reclaim_on">Always</string>
+    <string name="swap_reclaim_off">Never</string>
+
+    <string name="swap_swappiness_title">Swappiness</string>
+    <string name="swap_swappiness_100">High (100, default)</string>
+    <string name="swap_swappiness_60">Medium (60)</string>
+    <string name="swap_swappiness_30">Low (30)</string>
+
+    <string name="swap_status_title">Status</string>
+    <string name="swap_status_off">Off</string>
+    <string name="swap_status_unavailable">The swap service is not running</string>
+    <string name="swap_status_no_partition">SD card: no swap partition</string>
+    <string name="swap_status_failed">Could not turn swap on</string>
+    <!-- e.g. "zRAM: 12 MB of 512 MB used" -->
+    <string name="swap_status_area"><xliff:g id="name">%1$s</xliff:g>: <xliff:g id="used">%2$s</xliff:g> of <xliff:g id="size">%3$s</xliff:g> used</string>
+    <string name="swap_status_missing"><xliff:g id="name">%1$s</xliff:g>: not available</string>
+    <string name="swap_name_zram">zRAM</string>
+    <string name="swap_name_sdcard">SD card</string>
+
+    <string name="swap_sdcard_warning">Do not remove the SD card while swap is on it: apps whose memory was moved to the card will crash. Turn swap off or switch to zRAM first.</string>
+
+    <string-array name="swap_mode_entries" translatable="false">
+        <item>@string/swap_mode_zram</item>
+        <item>@string/swap_mode_sdcard</item>
+        <item>@string/swap_mode_both</item>
+    </string-array>
+    <string-array name="swap_mode_values" translatable="false">
+        <item>zram</item>
+        <item>sdcard</item>
+        <item>both</item>
+    </string-array>
+
+    <string-array name="swap_order_entries" translatable="false">
+        <item>@string/swap_order_zram_first</item>
+        <item>@string/swap_order_sdcard_first</item>
+        <item>@string/swap_order_spread</item>
+    </string-array>
+    <string-array name="swap_order_values" translatable="false">
+        <item>zram_first</item>
+        <item>sdcard_first</item>
+        <item>spread</item>
+    </string-array>
+
+    <string-array name="swap_zram_size_entries" translatable="false">
+        <item>256 MB</item>
+        <item>384 MB</item>
+        <item>512 MB</item>
+        <item>768 MB</item>
+        <item>1 GB</item>
+    </string-array>
+    <string-array name="swap_zram_size_values" translatable="false">
+        <item>268435456</item>
+        <item>402653184</item>
+        <item>536870912</item>
+        <item>805306368</item>
+        <item>1073741824</item>
+    </string-array>
+
+    <string-array name="swap_reclaim_entries" translatable="false">
+        <item>@string/swap_reclaim_auto</item>
+        <item>@string/swap_reclaim_on</item>
+        <item>@string/swap_reclaim_off</item>
+    </string-array>
+    <string-array name="swap_reclaim_values" translatable="false">
+        <item>auto</item>
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+
+    <string-array name="swap_swappiness_entries" translatable="false">
+        <item>@string/swap_swappiness_100</item>
+        <item>@string/swap_swappiness_60</item>
+        <item>@string/swap_swappiness_30</item>
+    </string-array>
+    <string-array name="swap_swappiness_values" translatable="false">
+        <item>100</item>
+        <item>60</item>
+        <item>30</item>
+    </string-array>
+</resources>

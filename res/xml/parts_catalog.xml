@@ -128,4 +128,11 @@
           android:title="@string/trust_title"
           android:fragment="org.lineageos.lineageparts.trust.TrustPreferences"
           lineage:xmlRes="@xml/trust_preferences" />
+    <!-- LG V521: drives the v521swap daemon of device/lge/v521 -->
+    <part android:key="swap_settings"
+          android:title="@string/swap_settings_title"
+          android:summary="@string/swap_settings_summary"
+          android:fragment="org.lineageos.lineageparts.swap.SwapSettings"
+          lineage:xmlRes="@xml/swap_settings" />
+
 </parts-catalog>
