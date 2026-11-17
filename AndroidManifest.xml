@@ -141,6 +141,25 @@
                 android:resource="@string/summary_empty" />
         </activity-alias>
 
+        <!-- Swap settings (System category), LG V521 -->
+        <activity-alias
+            android:name=".swap.SwapSettings"
+            android:label="@string/swap_settings_title"
+            android:icon="@drawable/ic_settings_swap"
+            android:targetActivity="PartsActivity">
+            <intent-filter android:priority="256">
+                <action android:name="org.lineageos.lineageparts.action.SETTINGS" />
+                <action android:name="org.lineageos.lineageparts.SWAP_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:value="@string/swap_settings_summary" />
+        </activity-alias>
+
         <!-- Status bar settings (System category) -->
         <activity-alias
             android:name=".statusbar.StatusBarSettings"
